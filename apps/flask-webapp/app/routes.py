@@ -3,17 +3,17 @@ from flask import jsonify
 import os
 
 
-@app.route("/", methods=['GET'])
+@app.route("/", methods=["GET"])
 def index():
     return jsonify(str("Hello world!")), 200
 
 
-@app.route("/health", methods=['GET'])
+@app.route("/health", methods=["GET"])
 def health_check():
     return jsonify(str("OK")), 200
 
 
-@app.route("/pod_name", methods=['GET'])
+@app.route("/pod_name", methods=["GET"])
 def pod_name():
     try:
         name = os.environ["MY_POD_NAME"]
