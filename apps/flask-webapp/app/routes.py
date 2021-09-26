@@ -19,4 +19,4 @@ def pod_name():
         name = os.environ["MY_POD_NAME"]
     except KeyError:
         name = "Not running in K8s!"
-    return jsonify(str("Pod is {}".format(name))), 200
+    return jsonify(str(" {}".format(name))), 200
