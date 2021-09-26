@@ -6,11 +6,11 @@ function App() {
   const [pod, setPod] = useState("");
 
   useEffect(() => {
-    const indexUrl = "http://k8s.mikemiller.tech/api"
+    const indexUrl = "http://k8s.mikemiller.tech/api/"
     const fetchData0 = async () => {
       try {
         const response = await fetch(indexUrl);
-        const text = await response.text();
+        const text = await response.json();
         console.log(text);
         setTitle(text);
       } catch (error) {
@@ -21,7 +21,7 @@ function App() {
     const fetchData1 = async () => {
       try {
         const response = await fetch(podUrl);
-        const text = await response.text();
+        const text = await response.json();
         console.log(text);
         setPod(text);
       } catch (error) {
@@ -38,11 +38,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3>
+          My K8s Lab
+        </h3>
         <p>
-          Backend default message - {title}
+          API index message: {title}
         </p>
         <p>
-          Current {pod}
+          API is running in: {pod}
         </p>
       </header>
     </div>
