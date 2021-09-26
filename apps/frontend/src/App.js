@@ -6,7 +6,7 @@ function App() {
   const [pod, setPod] = useState("");
 
   useEffect(() => {
-    const indexUrl = "http://k8s.mikemiller.tech/"
+    const indexUrl = "http://k8s.mikemiller.tech/api"
     const fetchData0 = async () => {
       try {
         const response = await fetch(indexUrl);
@@ -17,7 +17,7 @@ function App() {
         console.log("error", error);
       }
     };
-    const podUrl = "http://k8s.mikemiller.tech/pod_name"
+    const podUrl = "http://k8s.mikemiller.tech/api/pod_name"
     const fetchData1 = async () => {
       try {
         const response = await fetch(podUrl);

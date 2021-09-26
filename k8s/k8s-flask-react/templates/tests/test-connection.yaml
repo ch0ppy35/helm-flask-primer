@@ -1,0 +1,18 @@
+{{- range $service, $val := .Values.services }}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "test-connection-{{ $service }}"
+  labels:
+    name: "test-connection-{{ $service }}"
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ .service.name }}:{{ .service.port }}{{ .service.health }}']
+  restartPolicy: Never
+{{- end }}
