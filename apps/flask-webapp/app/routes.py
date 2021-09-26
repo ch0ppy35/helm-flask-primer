@@ -2,9 +2,9 @@ from app import app
 import os
 
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def index():
-    return "<h1>Hello world!</h1>", 200
+    return "Hello world!", 200
 
 
 @app.route("/health")
@@ -18,4 +18,4 @@ def pod_name():
         name = os.environ["MY_POD_NAME"]
     except KeyError:
         name = "- No name found -"
-    return "My pod name is {}".format(name), 200
+    return "Pod is {}".format(name), 200
