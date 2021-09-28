@@ -10,7 +10,7 @@ services:
       name: webapp
       type: ClusterIP
       port: 8080
-      health: /health
+      health: /healthz
     image:
       repository: ch0ppy35/basic-flask-app
       pullPolicy: Always

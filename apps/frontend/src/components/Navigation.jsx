@@ -27,8 +27,8 @@ function Navigation(props) {
                   props.location.pathname === "/about" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/about">
-                  About
+                <Link class="nav-link" to="/pods">
+                  Pods
                 </Link>
               </li>
             </ul>

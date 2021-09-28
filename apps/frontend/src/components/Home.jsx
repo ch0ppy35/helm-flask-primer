@@ -15,8 +15,9 @@ function Home() {
           <div class="col-lg-5">
             <h1 class="font-weight-light">Home</h1>
             <p>
-              This is a basic React app, to test and play around with
-              Kubernetes. Check out About
+              Welcome to my simple react app! Both this and the Flask
+              api are running in Kubernetes! Yay! Click on Pods for
+              more info!
             </p>
           </div>
         </div>

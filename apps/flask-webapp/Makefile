@@ -4,7 +4,10 @@ IMAGE_NAME ?= basic-flask-app
 CONTAINER_NAME ?= basic-flask-app
 CONTAINER_INSTANCE ?= default
 
-.PHONY: build tag push release
+.PHONY: run build tag push release
+
+run:
+	flask run
 
 build: 	Dockerfile
 	docker build -t $(IMAGE_NAME):$(VERSION) -f Dockerfile .
