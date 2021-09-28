@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function Pods() {
-  // const host = "http://k8s.mikemiller.tech/api"
-  const host = "http://127.0.0.1:5000"
+  const host = "http://k8s.mikemiller.tech/api"
+  // const host = "http://127.0.0.1:5000"
   const [indexMessage, setindexMessage] = useState("");
   const [message, setMessage] = useState("");
   const [pod, setPod] = useState("");
