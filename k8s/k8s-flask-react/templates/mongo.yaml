@@ -27,7 +27,7 @@ spec:
         app: mongo
     spec:
       containers:
-        - name: webapp
+        - name: mongo
           image: mongo
           resources:
             requests:
