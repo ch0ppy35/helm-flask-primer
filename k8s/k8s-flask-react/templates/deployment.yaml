@@ -39,6 +39,8 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.name
+          - name: MONGO_HOST
+            value: mongo
           ports:
             - name: http
               containerPort: {{  .service.port }}
